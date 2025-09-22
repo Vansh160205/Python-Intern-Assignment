@@ -9,7 +9,6 @@ Functions:
 3. analyze_agents() breakdown by agent
 """
 
-from __future__ import annotations
 import pandas as pd
 from pathlib import Path
 
