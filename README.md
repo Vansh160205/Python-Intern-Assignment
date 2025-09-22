@@ -1,46 +1,48 @@
-# Python Intern Assignment
+# Customer Support Ticket Analyzer
 
-**Time:** 60 minutes
+This repository contains a simple Python script (`analyzer.py`) to analyze customer support ticket data from `tickets.csv`.
 
-⚠️ **Important:** Use of AI tools (ChatGPT, GitHub Copilot, etc.) is not allowed for this exercise
+## Features
+The script provides three types of analysis:
+1. **Summary Statistics**
+   - Total number of tickets
+   - Average resolution time (in hours)
+   - Average satisfaction score
+2. **Category Analysis**
+   - Tickets grouped by category (e.g., Technical, Billing, Account)
+   - Average resolution time per category
+   - Average satisfaction score per category
+3. **Agent Performance**
+   - Tickets handled per agent
+   - Average resolution time per agent
+   - Average satisfaction score per agent
 
-## Task
-Create a Python script that analyses customer support ticket data.
+## Requirements
+- Python 3.8+
+- [pandas](https://pandas.pydata.org/)
 
-## What You Get
-- `tickets.csv` file with columns: ticket_id, category, priority, resolution_hours, satisfaction, agent
+Install dependencies with:
+```bash
+pip install pandas
+````
 
-## What You Build
-Create `analyzer.py` with three functions:
+## Usage
 
-### Function 1: Basic Stats
-```python
-def get_summary():
-    # Calculate and return:
-    # - Total number of tickets
-    # - Average resolution time
-    # - Average satisfaction score
+Place your `tickets.csv` file in the project root (same directory as `analyzer.py`).
+The CSV file must have the following columns:
+
+```
+ticket_id, category, priority, resolution_hours, satisfaction, agent
 ```
 
-### Function 2: Category Analysis  
-```python
-def analyze_categories():
-    # For each category (Technical, Billing, Account), return:
-    # - Number of tickets
-    # - Average resolution time
-    # - Average satisfaction score
+Run the script:
+
+```bash
+python analyzer.py
 ```
 
-### Function 3: Agent Performance
-```python
-def analyze_agents():
-    # For each agent, return:
-    # - Number of tickets handled
-    # - Average resolution time
-    # - Average satisfaction score
-```
+## Example Output
 
-## Expected Output
 ```
 Total Tickets: 95
 Average Resolution: 12.5 hours
@@ -48,7 +50,7 @@ Average Satisfaction: 3.8/5
 
 Categories:
 Technical: 32 tickets, 18.2h avg, 3.4/5
-Billing: 25 tickets, 7.1h avg, 4.2/5  
+Billing: 25 tickets, 7.1h avg, 4.2/5
 Account: 38 tickets, 11.8h avg, 3.9/5
 
 Agents:
@@ -57,16 +59,7 @@ Bob: 35 tickets, 11.8h avg, 3.7/5
 Carol: 32 tickets, 12.0h avg, 3.8/5
 ```
 
-## Submit
-Fork this repo and share the forked repo URL at hello@digilake.io
+## Notes
 
-**Requirements:**
-1. Working `analyzer.py` file
-2. Simple README with usage instructions  
-3. Push to GitHub
-
-> **Note:** Please maintain a git history so that we can analyse how the solution was evolved  
-> For any question/doubt, please reach out to hello@digilake.io  
-> **Bonus:** Follow code quality best practices (linting, formatting, type hints) and set up GitHub Actions to automatically check code quality (extra credit)
-
-That's it! Keep it simple and focus on getting it working.
+* Ensure the CSV file is correctly formatted.
+* Any missing or incorrect columns will raise an error.
